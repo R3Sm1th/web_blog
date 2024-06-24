@@ -1,0 +1,4 @@
+<%= @blog_post.title %>
+<%= @blog_post.body %>
+
+<%= button_to 'Edit', edit_blog_post_path(@blog_post) if user_signed_in? %>

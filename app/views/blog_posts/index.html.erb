@@ -1,0 +1,9 @@
+<h1>Blog Posts</h1>
+<% @blog_posts.each do |post| %>
+  <h2><%= link_to post.title, blog_post_path(post) %></h2>
+  <p><%= post.body %></p>
+  <%# <p><%= link_to 'Show', blog_post_path(post) %>
+  <%# <p><%= link_to 'Edit', edit_blog_post_path(post) %>
+  <%# <p><%= link_to 'Destroy', blog_post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <hr>
+<% end %>
