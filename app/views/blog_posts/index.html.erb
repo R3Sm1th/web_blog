@@ -1,5 +1,10 @@
 <h1>Blog Posts</h1>
 <% @blog_posts.each do |post| %>
+  <% if post.draft? %>
+    <p class="p-2 rounded text-red-500">Draft</p>
+  <% elsif post.scheduled? %>
+    <p class="p-2 rounded text-yellow-500">Scheduled</p>
+  <% end %>
   <h2><%= link_to post.title, blog_post_path(post) %></h2>
   <p><%= post.body %></p>
   <%# <p><%= link_to 'Show', blog_post_path(post) %>
